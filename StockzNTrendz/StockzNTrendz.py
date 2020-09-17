@@ -10,11 +10,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(802, 601)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+class Ui_MainWindow2(object):
+    def setupUi(self, MainWindow2):
+        MainWindow2.setObjectName("MainWindow2")
+        MainWindow2.resize(802, 601)
+        self.centralwidget = QtWidgets.QWidget(MainWindow2)
         self.centralwidget.setObjectName("centralwidget")
         self.mainLabel = QtWidgets.QLabel(self.centralwidget)
         self.mainLabel.setGeometry(QtCore.QRect(140, 40, 500, 100))
@@ -39,24 +39,24 @@ class Ui_MainWindow(object):
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(200, 250, 56, 40))
         self.pushButton.setObjectName("pushButton")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        MainWindow2.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow2)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 802, 18))
         self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        MainWindow2.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow2)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        MainWindow2.setStatusBar(self.statusbar)
         
         #Line where we connect loginCLicked function to button click
         self.pushButton.clicked.connect(self.loginClicked)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(MainWindow2)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow2)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, MainWindow2):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow2.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.mainLabel.setText(_translate("MainWindow", "Stockz N Trendz"))
         self.label.setText(_translate("MainWindow", "Enter your Username Here:"))
         self.label_2.setText(_translate("MainWindow", "Enter your Password Here:"))
@@ -74,8 +74,8 @@ class Ui_MainWindow(object):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
+    MainWindow2 = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow2()
+    ui.setupUi(MainWindow2)
+    MainWindow2.show()
     sys.exit(app.exec_())

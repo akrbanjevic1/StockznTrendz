@@ -8,8 +8,17 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from StockzNTrendz import Ui_MainWindow2
 
 class Ui_MainWindow(object):
+    
+    def openWindow(self):
+	    self.window = QtWidgets.QMainWindow()
+	    self.ui = Ui_MainWindow2()
+	    self.ui.setupUi(self.window)
+	    MainWindow.hide()
+	    self.window.show()
+	
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 600)
@@ -27,6 +36,8 @@ class Ui_MainWindow(object):
         self.loginButton = QtWidgets.QPushButton(self.centralwidget)
         self.loginButton.setGeometry(QtCore.QRect(340, 230, 71, 31))
         self.loginButton.setObjectName("loginButton")
+        #Here, we are having the log-in button open the log in screen
+        self.loginButton.clicked.connect(self.openWindow)
         self.websiteLink = QtWidgets.QLabel(self.centralwidget)
         self.websiteLink.setGeometry(QtCore.QRect(30, 381, 190, 21))
         self.websiteLink.setOpenExternalLinks(True)
