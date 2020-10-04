@@ -8,7 +8,21 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import mysql.connector as mysql
 
+db = mysql.connect(
+    host="localhost",
+    user="akrbanj",
+    passwd="akrbanj19!",
+    database="smadb"
+)
+
+cursor = db.cursor()
+
+query = "SELECT * from users"
+cursor.execute(query)
+records = cursor.fetchall()
+print(records)
 
 class Ui_MainWindow3(object):
     def setupUi(self, MainWindow3):
@@ -66,11 +80,13 @@ class Ui_MainWindow3(object):
 	    userVar = ""
 	    passVar = ""
 	    
+	    #here, we get the inputted username and pass and commit to the db
 	    userVar = self.userField.text()
 	    passVar = self.userField_2.text()
+	    cursor.execute(query,values)
+	    db.commit()
 	    
-	    if(userVar == "Hi" and passVar == "Hi"):
-		    print('Success!')
+	    
 		    
 
 if __name__ == "__main__":

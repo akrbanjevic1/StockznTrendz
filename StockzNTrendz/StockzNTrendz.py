@@ -8,7 +8,15 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import mysql.connector as mysql
 
+db = mysql.connect(
+    host="localhost",
+    user="akrbanj",
+    passwd="akrbanj19!",
+    database="smadb"
+)
+cursor = db.cursor()
 
 class Ui_MainWindow2(object):
     def setupUi(self, MainWindow2):
@@ -67,9 +75,16 @@ class Ui_MainWindow2(object):
 	    
 	    userVar = self.userField.text()
 	    passVar = self.userField_2.text()
+	    #Here we check to see if this combo exists in db
 	    
-	    if(userVar == "Hi" and passVar == "Hi"):
-		    print('Success!')
+	    query = ("SELECT id FROM users WHERE users.username = '"+userVar+"' AND users.password = '"+passVar+"'")
+	    cursor.execute(query)
+	    result = cursor.fetchone()
+	    #print(result) using this to test
+	    if(result != None):
+		    print("User Exists.")
+	    else:
+		    print("ERROR: Account does not exist. You need to register first!")
 
 if __name__ == "__main__":
     import sys
