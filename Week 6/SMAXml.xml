@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<SMAUsers>
+  <User status="admin">
+      <UserName>akrbanj1998</UserName>
+      <Email>akrbanj@gmail.com</Email>
+      <Stocks exchange="NYSE">
+           <Stock>AAPL</Stock>
+           <Stock>JPM</Stock>
+           <Stock>MSFT</Stock>
+      </Stocks>
+  </User>
+    <User status="default">
+      <UserName>JWeimer</UserName>
+      <Email>jweimer@outlook.com</Email>
+      <Stocks exchange="NYSE">
+           <Stock>AAPL</Stock>
+           <Stock>SIRI</Stock>
+           <Stock>UAA</Stock>
+      </Stocks>
+  </User>
+</SMAUsers>

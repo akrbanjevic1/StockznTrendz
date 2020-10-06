@@ -83,8 +83,19 @@ class Ui_MainWindow3(object):
 	    #here, we get the inputted username and pass and commit to the db
 	    userVar = self.userField.text()
 	    passVar = self.userField_2.text()
-	    cursor.execute(query,values)
-	    db.commit()
+	    
+	    query = ("SELECT id FROM users WHERE users.username = '"+userVar+"'")
+	    cursor.execute(query)
+	    result = cursor.fetchone()
+	    #print(result) using this to test
+	    if(result == None):
+		    query2 = "INSERT INTO users (username, password) VALUES (%s, %s)"
+		    values = (userVar, passVar)
+		    cursor.execute(query2, values)
+		    db.commit()
+		    print("You are now registered!")
+	    else:
+		    print("ERROR: Account already exists!")
 	    
 	    
 		    
