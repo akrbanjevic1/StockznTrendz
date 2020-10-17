@@ -1,14 +1,6 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'StockzNTrendz.ui'
-#
-# Created by: PyQt5 UI code generator 5.13.0
-#
-# WARNING! All changes made in this file will be lost!
-
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 import mysql.connector as mysql
+from stockPickScreen import Ui_pickerWindow
 
 db = mysql.connect(
     host="localhost",
@@ -19,6 +11,14 @@ db = mysql.connect(
 cursor = db.cursor()
 
 class Ui_MainWindow2(object):
+    def openWindow(self):
+	    self.window = QtWidgets.QMainWindow()
+	    self.username = self.userField.text()
+	    self.ui = Ui_pickerWindow(self.username)
+	    self.ui.setupUi(self.window)
+	    MainWindow2.hide()
+	    self.window.show()
+	    
     def setupUi(self, MainWindow2):
         MainWindow2.setObjectName("MainWindow2")
         MainWindow2.resize(802, 601)
@@ -47,6 +47,7 @@ class Ui_MainWindow2(object):
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(200, 250, 56, 40))
         self.pushButton.setObjectName("pushButton")
+        
         MainWindow2.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow2)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 802, 18))
@@ -76,13 +77,14 @@ class Ui_MainWindow2(object):
 	    userVar = self.userField.text()
 	    passVar = self.userField_2.text()
 	    #Here we check to see if this combo exists in db
-	    
 	    query = ("SELECT id FROM users WHERE users.username = '"+userVar+"' AND users.password = '"+passVar+"'")
 	    cursor.execute(query)
 	    result = cursor.fetchone()
+	    self.pushButton.clicked.connect(self.openWindow)
 	    #print(result) using this to test
 	    if(result != None):
-		    print("User Exists.")
+			#we want to create a new page where the user has a table of their 3 stocks.
+		    self.openWindow()
 	    else:
 		    print("ERROR: Account does not exist. You need to register first!")
 

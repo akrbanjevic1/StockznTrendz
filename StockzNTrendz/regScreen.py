@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'regScreen.ui'
-#
-# Created by: PyQt5 UI code generator 5.13.0
-#
-# WARNING! All changes made in this file will be lost!
-
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import mysql.connector as mysql
@@ -90,8 +82,11 @@ class Ui_MainWindow3(object):
 	    #print(result) using this to test
 	    if(result == None):
 		    query2 = "INSERT INTO users (username, password) VALUES (%s, %s)"
+		    holdingsquery="INSERT INTO holdings (ID, STOCK1, STOCK2, STOCK3) VALUES (%s, %s, %s, %s)"
 		    values = (userVar, passVar)
+		    holdingsVals = (userVar, "AAPL", "GOOGL", "MSFT")
 		    cursor.execute(query2, values)
+		    cursor.execute(holdingsquery, holdingsVals)
 		    db.commit()
 		    print("You are now registered!")
 	    else:

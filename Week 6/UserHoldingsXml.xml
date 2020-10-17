@@ -1,0 +1,31 @@
+﻿<?xml version="1.0"?>
+<SMAUsers>
+      <User Name="Aleks Krbanj">
+            <Stocks exchange="NYSE">
+                    <Stock ticker="AAPL">
+                        <Amount>100</Amount>
+                    </Stock>
+                    <Stock ticker="JPM">
+                        <Amount>345</Amount>
+                    </Stock>
+                    <Stock ticker="MSFT">
+                        <Amount>1000</Amount> 
+                    </Stock>
+                <Value>135000</Value> <!--this line displays value of total holdings -->
+            </Stocks>
+        </User>
+      <User Name="Jim Weim">
+            <Stocks exchange="NYSE">
+                    <Stock ticker="AAPL">
+                        <Amount>50</Amount>
+                    </Stock>
+                    <Stock ticker="SIRI">
+                        <Amount>125</Amount>
+                    </Stock>
+                    <Stock ticker="UAA">
+                        <Amount>300</Amount>
+                    </Stock>
+                <Value>100000</Value>
+            </Stocks>
+      </User>
+</SMAUsers>
