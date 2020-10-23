@@ -11,11 +11,11 @@ db = mysql.connect(
 cursor = db.cursor()
 
 class Ui_MainWindow2(object):
-    def openWindow(self):
+    def openPickWindow(self):
 	    self.window = QtWidgets.QMainWindow()
 	    self.username = self.userField.text()
 	    self.ui = Ui_pickerWindow(self.username)
-	    self.ui.setupUi(self.window)
+	    self.ui.setupUi(self.window, self.username)
 	    MainWindow2.hide()
 	    self.window.show()
 	    
@@ -80,11 +80,11 @@ class Ui_MainWindow2(object):
 	    query = ("SELECT id FROM users WHERE users.username = '"+userVar+"' AND users.password = '"+passVar+"'")
 	    cursor.execute(query)
 	    result = cursor.fetchone()
-	    self.pushButton.clicked.connect(self.openWindow)
+	    self.pushButton.clicked.connect(self.openPickWindow)
 	    #print(result) using this to test
 	    if(result != None):
 			#we want to create a new page where the user has a table of their 3 stocks.
-		    self.openWindow()
+		    self.openPickWindow()
 	    else:
 		    print("ERROR: Account does not exist. You need to register first!")
 
