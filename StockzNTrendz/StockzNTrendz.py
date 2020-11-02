@@ -1,6 +1,13 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import mysql.connector as mysql
 from stockPickScreen import Ui_pickerWindow
+import pandas as pd
+import pandas_datareader as web
+import numpy as np
+import datetime as dt
+import matplotlib.pyplot as plt
+import pyEX as p
+from datetime import datetime as date
 
 db = mysql.connect(
     host="localhost",

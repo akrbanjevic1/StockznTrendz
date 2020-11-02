@@ -1,6 +1,15 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import mysql.connector as mysql
 import re
+import pandas as pd
+import pandas_datareader as web
+import numpy as np
+import datetime as dt
+import matplotlib.pyplot as plt
+import pyEX as p
+from datetime import datetime as date
+from datetime import timedelta
+
 db = mysql.connect(
     host="localhost",
     user="akrbanj",
@@ -53,6 +62,7 @@ class Ui_pickerWindow(object):
         font.setPointSize(12)
         self.viewButton.setFont(font)
         self.viewButton.setObjectName("viewButton")
+        self.viewButton.clicked.connect(self.viewClicked)
         #input field for adding new stocks
         self.stockInputField = QtWidgets.QLineEdit(self.centralwidget)
         self.stockInputField.setGeometry(QtCore.QRect(290, 450, 80, 20))
@@ -97,6 +107,28 @@ class Ui_pickerWindow(object):
         self.stockListLabel.setText(_translate("pickerWindow", "Your Current List of Stocks:"))
         self.viewButton.setText(_translate("pickerWindow", "View"))
         self.submitButton.setText(_translate("pickerWindow", "Submit"))
+    def viewClicked(self):
+        stockPick = self.stockList.selectedItems()
+        ticker = ""
+        for selectedStock in stockPick:
+            ticker = selectedStock.text()
+        todaysDate = pd.to_datetime('today').date()
+        end = dt.datetime.now()
+        start = end - timedelta(days=250)
+        print(end)
+        
+        df = web.DataReader(ticker, 'yahoo', start, end)
+        df['SMA50'] = df['Adj Close'].rolling(5).mean()
+        df['SMA200'] = df['Adj Close'].rolling(10).mean()
+        
+        #plot testing
+        plt.figure(figsize=(15,5))
+        plt.plot(df['SMA50'], label='SMA for 50 days')
+        plt.plot(df['SMA200'], label='SMA for 200 days')
+        plt.title('Simple Moving Averages of 50 and 200 for ' + ticker)
+        plt.legend()
+        plt.show()
+        
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
