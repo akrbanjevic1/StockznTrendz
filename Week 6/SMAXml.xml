@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0"?>
-<SMAUsers>
+<smausers>
   <User status="admin">
       <UserName>akrbanj1998</UserName>
       <Email>akrbanj@gmail.com</Email>
@@ -18,4 +18,4 @@
            <Stock>UAA</Stock>
       </Stocks>
   </User>
-</SMAUsers>
+</smausers>

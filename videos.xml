@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml-stylesheet type="text/xsl" href="C:\Users\akrba\Desktop\Loyola Stuff\Fall 2020\COMP 336\videos.xsl" ?>
+<videos>
+	<video category="simple moving average information">
+		<title>Simple Moving Average (SMA): Technical Analysis</title>
+		<author>Option Alpha</author>
+		<upload-date>2012</upload-date>
+		<link>https://www.youtube.com/watch?v=x4nO5yoarM0</link>
+	</video>
+	<video category="general trading">
+		<title>How To Trade Moving Averages</title>
+		<author>Trading 212</author>
+		<upload-date>2015</upload-date>
+		<link>https://www.youtube.com/watch?v=4R2CDbw4g88</link>
+	</video>
+</videos>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0"?>
+<users>
+    <user name="Aleks Krbanj">
+        <stocks exchange
+            ="NYSE">
+            <stock 
+                    ticker
+                    ="AAPL">
+                <amount-held>100</amount-held>
+                <current-worth currency="USD"> 
+                    125000
+                </current-worth>
+            </stock>
+            <stock ticker="JPM">
+                <amount-held>345</amount-held>
+                <current-worth currency="EUR">
+                    89000
+                </current-worth>
+            </stock>
+            <stock ticker="MSFT">
+                <amount-held>1000</amount-held>
+                <current-worth currency="USD">
+                    25000
+                </current-worth>
+            </stock>
+            <total-value currency = "USD">1000000
+            </total-value>
+            <!--this line displays value of total holdings -->
+        </stocks>
+    </user>
+    <user name="Jim Weim">
+        <stocks exchange="NYSE">
+            <stock ticker="AAPL">
+                <amount-held>50</amount-held>
+                <current-worth currency="USD"> 
+                    125000
+                </current-worth>
+            </stock>
+            <stock ticker="SIRI">
+                <amount-held>125</amount-held>
+                <current-worth currency="USD"> 
+                    125000
+                </current-worth>
+            </stock>
+            <stock ticker="UAA">
+                <amount-held>300</amount-held>
+                <current-worth currency="USD"> 
+                    125000
+                </current-worth>
+            </stock>
+            <total-value currency="USD">1000000</total-value>
+        </stocks>
+    </user>
+</users>

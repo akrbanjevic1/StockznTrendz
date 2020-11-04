@@ -115,7 +115,7 @@ class Ui_pickerWindow(object):
         todaysDate = pd.to_datetime('today').date()
         end = dt.datetime.now()
         start = end - timedelta(days=250)
-        print(end)
+        #print(end)
         
         df = web.DataReader(ticker, 'yahoo', start, end)
         df['SMA50'] = df['Adj Close'].rolling(5).mean()
@@ -129,6 +129,15 @@ class Ui_pickerWindow(object):
         plt.legend()
         plt.show()
         
+        #here we get the last row and last column first, then get the SMA value
+        SMA200Frame = df.iloc[-1:,[-1]]
+        SMA200 = SMA200Frame['SMA200'].values[0]
+        SMA50Frame = df.iloc[-1:,[-2]]
+        SMA50 = SMA50Frame['SMA50'].values[0]
+        #print(SMA50) testing the SMA values
+        #print(SMA200)
+        
+        #here, we want to make a decision based on the math...
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
