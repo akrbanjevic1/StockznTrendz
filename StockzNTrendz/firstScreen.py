@@ -69,7 +69,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Welcome"))
         self.welcomeLabel.setText(_translate("MainWindow", "Welcome to Stockz N Trendz!"))
         self.headerLabel.setText(_translate("MainWindow", "SMATrendz"))
         self.registerButton.setText(_translate("MainWindow", "Register"))

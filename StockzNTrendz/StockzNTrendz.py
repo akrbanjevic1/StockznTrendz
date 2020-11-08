@@ -73,7 +73,7 @@ class Ui_MainWindow2(object):
 
     def retranslateUi(self, MainWindow2):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow2.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow2.setWindowTitle(_translate("MainWindow", "Login"))
         self.mainLabel.setText(_translate("MainWindow", "Stockz N Trendz"))
         self.label.setText(_translate("MainWindow", "Enter your Username Here:"))
         self.label_2.setText(_translate("MainWindow", "Enter your Password Here:"))
@@ -95,7 +95,6 @@ class Ui_MainWindow2(object):
 		    self.openPickWindow(self.centralwidget)
 	    else:
 		    print("ERROR: Account does not exist. You need to register first!")
-
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

@@ -51,7 +51,11 @@ class Ui_pickerWindow(object):
         self.stockListLabel = QtWidgets.QLabel(self.centralwidget)
         self.stockListLabel.setGeometry(QtCore.QRect(190, 70, 420, 50))
         self.changeLabel = QtWidgets.QLabel(self.centralwidget)
-        self.changeLabel.setGeometry(QtCore.QRect(160, 400, 500, 50))
+        self.changeLabel.setGeometry(QtCore.QRect(160, 420, 500, 50))
+        self.recLabel = QtWidgets.QLabel(self.centralwidget)
+        self.recLabel.setGeometry(QtCore.QRect(190,300,280,60))
+        self.recStatusLabel = QtWidgets.QLabel(self.centralwidget)
+        self.recStatusLabel.setGeometry(QtCore.QRect(320,330,80,100))
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setBold(True)
@@ -60,10 +64,17 @@ class Ui_pickerWindow(object):
         font2.setPointSize(7)
         font2.setBold(True)
         font2.setWeight(50)
+        font3 = QtGui.QFont("Impact")
+        font3.setPointSize(13)
+        font3.setWeight(75)
         self.stockListLabel.setFont(font)
         self.stockListLabel.setObjectName("stockListLabel")
+        self.recLabel.setFont(font)
+        self.recLabel.setObjectName("recLabel")
         self.changeLabel.setFont(font2)
         self.changeLabel.setObjectName("changeLabel")
+        self.recStatusLabel.setFont(font3)
+        self.recStatusLabel.setObjectName("rectStatusLabel")
         self.viewButton = QtWidgets.QPushButton(self.centralwidget)
         self.viewButton.setGeometry(QtCore.QRect(190, 260, 100, 41))
         font = QtGui.QFont()
@@ -73,12 +84,12 @@ class Ui_pickerWindow(object):
         self.viewButton.clicked.connect(self.viewClicked)
         #input field for adding new stocks
         self.stockInputField = QtWidgets.QLineEdit(self.centralwidget)
-        self.stockInputField.setGeometry(QtCore.QRect(290, 450, 80, 20))
+        self.stockInputField.setGeometry(QtCore.QRect(290, 470, 80, 20))
         self.stockInputField.setEchoMode(QtWidgets.QLineEdit.Normal)
         self.stockInputField.setObjectName("stockInputField")
         #Submit button for stock input field
         self.submitButton = QtWidgets.QPushButton(self.centralwidget)
-        self.submitButton.setGeometry(QtCore.QRect(280, 490, 100, 51))
+        self.submitButton.setGeometry(QtCore.QRect(280, 510, 100, 51))
         #connecting submit button to function for taking text from line
         self.submitButton.clicked.connect(self.submitClicked)
         font = QtGui.QFont()
@@ -114,6 +125,7 @@ class Ui_pickerWindow(object):
         pickerWindow.setWindowTitle(_translate("pickerWindow", "Stock Picks"))
         self.stockListLabel.setText(_translate("pickerWindow", "Your Current List of Stocks:"))
         self.changeLabel.setText(_translate("pickerWindow", "Tip: To CHANGE a stock: Highlight a stock, type new one (in field below) and click Submit"))
+        self.recLabel.setText(_translate("pickerWindow", "Recommendation:"))
         self.viewButton.setText(_translate("pickerWindow", "View"))
         self.submitButton.setText(_translate("pickerWindow", "Submit"))
     def viewClicked(self):
@@ -145,8 +157,11 @@ class Ui_pickerWindow(object):
         SMA50 = SMA50Frame['SMA50'].values[0]
         #print(SMA50) testing the SMA values
         #print(SMA200)
-        
         #here, we want to make a decision based on the math...
+        if(SMA50 > SMA200):
+            self.recStatusLabel.setText("BUY")
+        elif(SMA50 <= SMA200):
+            self.recStatusLabel.setText("HOLD")
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
