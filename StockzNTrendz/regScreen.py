@@ -69,6 +69,7 @@ class Ui_MainWindow3(object):
         self.pushButton.setText(_translate("MainWindow", "Register"))
         
     def regClicked(self, text):
+	    MainWindow3 = self.centralwidget
 	    userVar = ""
 	    passVar = ""
 	    

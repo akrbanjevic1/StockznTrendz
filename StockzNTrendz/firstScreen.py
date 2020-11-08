@@ -1,6 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from stockPickScreen import *
-from StockzNTrendz import *
+from StockzNTrendz import Ui_MainWindow2
+from regScreen import Ui_MainWindow3
 class Ui_MainWindow(object):
     
     def openWindow(self):

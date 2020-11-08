@@ -50,12 +50,20 @@ class Ui_pickerWindow(object):
         
         self.stockListLabel = QtWidgets.QLabel(self.centralwidget)
         self.stockListLabel.setGeometry(QtCore.QRect(190, 70, 420, 50))
+        self.changeLabel = QtWidgets.QLabel(self.centralwidget)
+        self.changeLabel.setGeometry(QtCore.QRect(160, 400, 500, 50))
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
+        font2 = QtGui.QFont()
+        font2.setPointSize(7)
+        font2.setBold(True)
+        font2.setWeight(50)
         self.stockListLabel.setFont(font)
         self.stockListLabel.setObjectName("stockListLabel")
+        self.changeLabel.setFont(font2)
+        self.changeLabel.setObjectName("changeLabel")
         self.viewButton = QtWidgets.QPushButton(self.centralwidget)
         self.viewButton.setGeometry(QtCore.QRect(190, 260, 100, 41))
         font = QtGui.QFont()
@@ -105,6 +113,7 @@ class Ui_pickerWindow(object):
         _translate = QtCore.QCoreApplication.translate
         pickerWindow.setWindowTitle(_translate("pickerWindow", "Stock Picks"))
         self.stockListLabel.setText(_translate("pickerWindow", "Your Current List of Stocks:"))
+        self.changeLabel.setText(_translate("pickerWindow", "Tip: To CHANGE a stock: Highlight a stock, type new one (in field below) and click Submit"))
         self.viewButton.setText(_translate("pickerWindow", "View"))
         self.submitButton.setText(_translate("pickerWindow", "Submit"))
     def viewClicked(self):
