@@ -20,8 +20,8 @@ class Ui_MainWindow(object):
 	
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
-        MainWindow.setStyleSheet("background-color: #28589c;")
+        MainWindow.resize(800, 500)
+        MainWindow.setStyleSheet("background-color: #245DA3;")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.welcomeLabel = QtWidgets.QLabel(self.centralwidget)
@@ -34,10 +34,10 @@ class Ui_MainWindow(object):
         font2.setPointSize(15)
         self.welcomeLabel.setFont(font)
         self.welcomeLabel.setObjectName("welcomeLabel")
-        self.welcomeLabel.setStyleSheet("background-color: #05302b; color: #27c4b2; border: 3px solid black;")
+        self.welcomeLabel.setStyleSheet("background-color: #05302b; color: #6DDEAB; border: 3px solid black;")
         self.headerLabel.setFont(font2)
         self.headerLabel.setObjectName("headerLabel")
-        self.headerLabel.setStyleSheet("background-color: #05302b; color: #27c4b2;")
+        self.headerLabel.setStyleSheet("background-color: #05302b; color: #6DDEAB;")
         self.registerButton = QtWidgets.QPushButton(self.centralwidget)
         self.registerButton.setGeometry(QtCore.QRect(260, 260, 71, 31))
         self.registerButton.setObjectName("registerButton")
