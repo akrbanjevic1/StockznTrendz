@@ -14,7 +14,7 @@ cursor = db.cursor()
 query = "SELECT * from users"
 cursor.execute(query)
 records = cursor.fetchall()
-print(records)
+#print(records)
 
 class Ui_MainWindow3(object):
     def setupUi(self, MainWindow3):
@@ -106,7 +106,7 @@ class Ui_MainWindow3(object):
 		    db.commit()
 		    print("You are now registered!")
 	    else:
-		    print("ERROR: Account already exists!")
+		    print("ERROR: Account with this user already exists!")
 	    
 	    
 		    

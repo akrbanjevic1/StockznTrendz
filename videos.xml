@@ -25,4 +25,16 @@
 		<upload-date>May 2015</upload-date>
 		<link>https://www.youtube.com/watch?v=DF_44sWnAsk</link>
 	</video>
+	<video category="python programming">
+		<title>Matplotlib Tutorial 1</title>
+		<author>sentdex</author>
+		<upload-date>July 2015</upload-date>
+		<link>https://www.youtube.com/watch?v=q7Bo_J8x_dw</link>
+	</video>
+	<video category="general trading">
+		<title>Tips for New Traders</title>
+		<author>Investopedia</author>
+		<upload-date>February 2018</upload-date>
+		<link>https://www.youtube.com/watch?v=KdtO8EB26bo</link>
+	</video>
 </videos>

@@ -26,9 +26,12 @@
   color: white;
 }
 
-.body {
-  width:100%;
+body {
+  width:95%;
   height:100%;
+  color: grey;
+  background-color: black;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 img {

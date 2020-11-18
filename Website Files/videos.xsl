@@ -2,10 +2,10 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="html" encoding="UTF-8"/>
 <xsl:template match="/">
-  <link rel="stylesheet" type="text/css" href="videos.css"/>
+
 <html>
 <head>
-
+  <link rel="stylesheet" type="text/css" href="videos.css"/>
 </head>
 <div class="topnav">
   <a class="active" href="index.html">Home</a>
