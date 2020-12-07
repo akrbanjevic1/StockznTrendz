@@ -25,7 +25,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.welcomeLabel = QtWidgets.QLabel(self.centralwidget)
-        self.welcomeLabel.setGeometry(QtCore.QRect(125, 110, 545, 51))
+        self.welcomeLabel.setGeometry(QtCore.QRect(165, 110, 450, 51))
         self.headerLabel = QtWidgets.QLabel(self.centralwidget)
         self.headerLabel.setGeometry(QtCore.QRect(0, 0, 800, 50))
         font = QtGui.QFont()
@@ -70,7 +70,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Welcome"))
-        self.welcomeLabel.setText(_translate("MainWindow", "Welcome to Stockz N Trendz!"))
+        self.welcomeLabel.setText(_translate("MainWindow", "Welcome to SMATrendz!"))
         self.headerLabel.setText(_translate("MainWindow", "SMATrendz"))
         self.registerButton.setText(_translate("MainWindow", "Register"))
         self.loginButton.setText(_translate("MainWindow", "Login"))

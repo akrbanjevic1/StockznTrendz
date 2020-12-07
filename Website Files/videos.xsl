@@ -9,7 +9,7 @@
 </head>
 <div class="topnav">
   <a class="active" href="index.html">Home</a>
-  <a href="#about">About</a>
+  <a class ="active" href="about.html">About</a>
 </div>
 <body>
   <h1>All Informational Videos</h1>
@@ -117,7 +117,6 @@
             </xsl:for-each>
   </TBODY>
 </table>
-
 </body>
 </html>
 </xsl:template>
