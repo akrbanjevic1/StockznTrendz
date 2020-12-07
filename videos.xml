@@ -25,16 +25,16 @@
 		<upload-date>May 2015</upload-date>
 		<link>https://www.youtube.com/watch?v=DF_44sWnAsk</link>
 	</video>
-	<video category="python programming">
-		<title>Matplotlib Tutorial 1</title>
-		<author>sentdex</author>
-		<upload-date>July 2015</upload-date>
-		<link>https://www.youtube.com/watch?v=q7Bo_J8x_dw</link>
+	<video category="general trading">
+		<title>Create a Trading Strategy in 30 minutes</title>
+		<author>Quantra</author>
+		<upload-date>March 2020</upload-date>
+		<link>https://www.youtube.com/watch?v=B23sVOkzEjY</link>
 	</video>
 	<video category="general trading">
-		<title>Tips for New Traders</title>
-		<author>Investopedia</author>
-		<upload-date>February 2018</upload-date>
-		<link>https://www.youtube.com/watch?v=KdtO8EB26bo</link>
+		<title>Trading Up-Close: SMA vs EMA</title>
+		<author>Charles Schwab</author>
+		<upload-date>October 2019</upload-date>
+		<link>https://www.youtube.com/watch?v=M9qAEy16kn0</link>
 	</video>
 </videos>
