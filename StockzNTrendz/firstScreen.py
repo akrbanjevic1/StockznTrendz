@@ -74,7 +74,7 @@ class Ui_MainWindow(object):
         self.headerLabel.setText(_translate("MainWindow", "SMATrendz"))
         self.registerButton.setText(_translate("MainWindow", "Register"))
         self.loginButton.setText(_translate("MainWindow", "Login"))
-        self.websiteLink.setText('''<a href='http://stackoverflow.com' style='color:red;'>Click Here For More Info</a>''')
+        self.websiteLink.setText('''<a href='https://akrbanjevic1.github.io/StockznTrendz/' style='color:red;'>Click Here For More Info</a>''')
 
 if __name__ == "__main__":
     import sys
